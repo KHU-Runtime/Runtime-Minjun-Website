@@ -121,7 +121,7 @@
         "</div>" +
         '<div class="container footer__bottom">' +
           "<p>© " + new Date().getFullYear() + " RUNTIME; All rights reserved.</p>" +
-          "<p>본 사이트는 동아리 홍보용으로 제작된 비공식 로컬 페이지입니다.</p>" +
+          "<p>본 사이트는 동아리 홍보용으로 제작된 비공식 페이지입니다.</p>" +
         "</div>" +
       "</footer>" +
       '<a href="#top" class="to-top" id="toTop" aria-label="맨 위로">↑</a>';
