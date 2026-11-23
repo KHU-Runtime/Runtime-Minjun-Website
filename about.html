@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동아리 소개 | RUNTIME;</title>
+  <meta name="description" content="런타임 동아리 소개">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- 웹폰트 (인터넷이 없으면 시스템 글꼴로 자동 대체됩니다) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+
+  <!-- 헤더: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- 상단 배너: js/layout.js 가 채워 넣습니다 -->
+    <section id="pageHero"></section>
+
+    <section class="section about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__intro reveal">
+            <p class="about__lead">
+              <span class="hl">RUNTIME;</span><br>
+              프로그램이 <strong>실제로 실행되는 시간</strong>.
+            </p>
+            <p>
+              런타임은 경희대학교 이과대학의 IT 동아리입니다.
+              책 속의 이론에 머무르지 않고, 직접 코드를 작성하고 실행해 보며
+              아이디어를 실제 결과물로 만들어 가는 사람들이 모였습니다.
+            </p>
+            <p>
+              전공도, 실력도 상관없습니다. 함께 배우고, 함께 만들고,
+              서로의 경험을 나누며 성장하는 것 — 그것이 런타임이 일하는 방식입니다.
+            </p>
+          </div>
+
+          <aside class="panel reveal" aria-label="동아리 정보">
+            <div class="panel__head">
+              <span class="panel__dot"></span>CLUB PROFILE
+              <span class="panel__id">ID: KHU-RT</span>
+            </div>
+            <dl class="panel__body" id="profileList"></dl>
+            <a class="panel__link js-insta" href="#" target="_blank" rel="noopener">
+              인스타그램에서 최신 소식 보기 <span>↗</span>
+            </a>
+          </aside>
+        </div>
+
+        <ul class="values">
+          <li class="value reveal">
+            <span class="value__num">01</span>
+            <h3 class="value__en">LEARN</h3>
+            <p class="value__ko">함께 배운다</p>
+            <p class="value__desc">입문부터 심화까지, 서로 가르치고 배우는 스터디 문화를 지향합니다.</p>
+          </li>
+          <li class="value reveal">
+            <span class="value__num">02</span>
+            <h3 class="value__en">BUILD</h3>
+            <p class="value__ko">직접 만든다</p>
+            <p class="value__desc">배운 것을 프로젝트로 실행해 보며 진짜 실력을 쌓습니다.</p>
+          </li>
+          <li class="value reveal">
+            <span class="value__num">03</span>
+            <h3 class="value__en">SHARE</h3>
+            <p class="value__ko">나누며 성장한다</p>
+            <p class="value__desc">세미나와 교류를 통해 경험을 나누고 네트워크를 넓힙니다.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 이전/다음 화면 버튼 -->
+    <nav id="pageNav" aria-label="화면 이동"></nav>
+  </main>
+
+  <!-- 푸터: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

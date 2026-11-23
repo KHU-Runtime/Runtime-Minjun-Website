@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNTIME; | 경희대학교 이과대학 IT 동아리 런타임</title>
+  <meta name="description" content="경희대학교 이과대학 IT 동아리 런타임(RUNTIME;) 홈페이지 - 동아리 소개, 활동, 아카이브, 지원 안내">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- 웹폰트 (인터넷이 없으면 시스템 글꼴로 자동 대체됩니다) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <!-- 오른쪽 섹션 도트 (홈 전용) -->
+  <nav class="dots" aria-label="섹션 바로가기">
+    <a href="#home" data-label="HOME"><span class="sr-only">홈</span></a>
+    <a href="#intro" data-label="ABOUT"><span class="sr-only">소개</span></a>
+    <a href="#h-activity" data-label="ACTIVITY"><span class="sr-only">활동</span></a>
+    <a href="#h-archive" data-label="ARCHIVE"><span class="sr-only">아카이브</span></a>
+    <a href="#h-recruit" data-label="RECRUIT"><span class="sr-only">지원</span></a>
+  </nav>
+
+  <!-- 헤더: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="landing" data-section aria-labelledby="landing-title">
+      <div class="landing-body container">
+        <div class="landing-text">
+          <p class="terminal-path"><span aria-hidden="true">❯</span> khu / science / it-club</p>
+          <h1 id="landing-title">RUNTIME<span>;</span></h1>
+          <p class="landing-sub">경희대학교 이과대학 IT 동아리</p>
+          <p class="landing-copy">코드가 실행되는 그 순간처럼,<br>아이디어가 현실이 되는 시간을 함께 만듭니다.</p>
+          <div class="landing-actions"><a href="about.html">동아리 소개 <span>→</span></a><a href="recruit.html">지원 안내 <span>↗</span></a></div>
+        </div>
+        <div class="cat-studio">
+          <div class="cat-scene" id="catScene" role="img" aria-label="흰 토끼가 키보드를 두드릴 때마다 앞에 놓인 모니터에 자바스크립트 코드가 한 글자씩 나타납니다.">
+            <img class="cat-art" src="images/cat-studio.png" alt="" width="680" height="410">
+            <span class="cat-tab" aria-hidden="true">runtime.js</span>
+            <pre class="cat-code" aria-hidden="true"><code id="screenCode">const club = "RUNTIME;";</code></pre>
+            <span class="cat-paw paw-left"></span><span class="cat-paw paw-right"></span>
+          </div>
+          <div class="cat-controls">
+            <button id="typeKey" type="button">한 글자 입력 <b aria-hidden="true">↵</b></button>
+            <button id="autoType" type="button">일시정지</button>
+            <button id="openEditor" type="button" aria-haspopup="dialog">코드 크게 보기 ↗</button>
+          </div>
+        </div>
+      </div>
+      <div class="landing-foot container"><span><b aria-hidden="true">⑂</b> main <i>/</i> index.html</span><a href="#intro">동아리 둘러보기 ↓</a></div>
+    </section>
+    <dialog id="codePreview" aria-label="런타임 코드 실행 화면"><form method="dialog"><button autofocus>닫기 ×</button></form>
+          <div class="vscode">
+            <div class="vscode__titlebar">
+              <span class="vscode__lights"><i></i><i></i><i></i></span>
+              <span class="vscode__title">runtime.js — RUNTIME;</span>
+            </div>
+            <div class="vscode__tabs">
+              <span class="vscode__tab is-active"><b class="vscode__js">JS</b>runtime.js<i>×</i></span>
+              <span class="vscode__tab">README.md</span>
+            </div>
+            <div class="vscode__crumbs">RUNTIME; <i>›</i> src <i>›</i> <b class="vscode__js">JS</b> runtime.js</div>
+            <div class="vscode__editor">
+              <ol class="vscode__lines" id="codeLines"><li>1</li></ol>
+              <pre class="vscode__code"><code id="typing"></code></pre>
+            </div>
+            <div class="vscode__panel">
+              <div class="vscode__panel-tabs"><span>PROBLEMS</span><span>OUTPUT</span><span class="is-active">TERMINAL</span></div>
+              <pre class="vscode__term"><span class="tm-path">runtime</span> <span class="tm-p">$</span> <span id="termCmd"></span>
+<span id="termOut"></span></pre>
+            </div>
+            <div class="vscode__status">
+              <span>⎇ main</span><span class="vscode__status-r">Ln <b id="codeLn">1</b>, Col 1</span><span>UTF-8</span><span>JavaScript</span>
+            </div>
+          </div>
+        
+    </dialog>
+
+
+
+    <!-- ================= ABOUT 요약 ================= -->
+    <section id="intro" class="section about" data-section>
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="sec-head__en">ABOUT</p>
+          <h2 class="sec-head__ko">동아리 소개</h2>
+        </div>
+        <div class="home-about">
+          <div class="about__intro reveal">
+            <p class="about__lead">
+              <span class="hl">RUNTIME;</span><br>
+              프로그램이 <strong>실제로 실행되는 시간</strong>.
+            </p>
+            <p>런타임은 경희대학교 이과대학의 IT 동아리입니다. 직접 코드를 작성하고 실행해 보며 아이디어를 실제 결과물로 만들어 가는 사람들이 모였습니다.</p>
+            <a href="about.html" class="more-link">동아리 소개 자세히 보기 <span>→</span></a>
+          </div>
+          <ul class="mini-values reveal">
+            <li><em>LEARN</em><span>함께 배운다</span></li>
+            <li><em>BUILD</em><span>직접 만든다</span></li>
+            <li><em>SHARE</em><span>나누며 성장한다</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACTIVITY 요약 ================= -->
+    <section id="h-activity" class="section activity" data-section>
+      <div class="container">
+        <div class="sec-head sec-head--light sec-head--row reveal">
+          <div>
+            <p class="sec-head__en">ACTIVITY</p>
+            <h2 class="sec-head__ko">동아리 활동</h2>
+          </div>
+          <a href="activity.html" class="btn btn--yellow"><span>활동 자세히 보기 →</span></a>
+        </div>
+        <ul class="mini-acts" id="homeActs"></ul>
+      </div>
+    </section>
+
+    <!-- ================= ARCHIVE 요약 ================= -->
+    <section id="h-archive" class="section home-archive" data-section>
+      <div class="container">
+        <div class="sec-head sec-head--row reveal">
+          <div>
+            <p class="sec-head__en">ARCHIVE</p>
+            <h2 class="sec-head__ko">아카이브</h2>
+          </div>
+          <a href="archive.html" class="btn btn--blue"><span>아카이브 전체 보기 →</span></a>
+        </div>
+        <ul class="arc-grid arc-grid--home" id="homeArchive"></ul>
+        <a href="history.html" class="history-teaser reveal">
+          <span class="history-teaser__en">HISTORY</span>
+          <span class="history-teaser__txt"><strong>런타임의 역사</strong>기수별 임원진과 활동 사진을 문서로 보기</span>
+          <span class="history-teaser__gens" id="homeGens"></span>
+          <span class="history-teaser__go" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= RECRUIT 요약 ================= -->
+    <section id="h-recruit" class="section recruit" data-section>
+      <div class="container">
+        <div class="sec-head sec-head--row reveal">
+          <div>
+            <p class="sec-head__en">RECRUIT</p>
+            <h2 class="sec-head__ko">동아리 지원</h2>
+          </div>
+          <a href="recruit.html" class="btn btn--blue"><span>지원 안내 자세히 보기 →</span></a>
+        </div>
+        <div data-recruit-banner></div>
+        <div data-cta></div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ 안내 띠 ================= -->
+    <section class="faq-band">
+      <div class="container faq-band__inner reveal">
+        <p><em>FAQ</em> 지원 전에 궁금한 점이 있나요?</p>
+        <a href="faq.html" class="btn btn--yellow"><span>자주 묻는 질문 보기 →</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cat-studio.js"></script>
+</body>
+</html>

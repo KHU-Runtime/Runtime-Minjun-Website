@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>런타임의 역사 | RUNTIME;</title>
+  <meta name="description" content="기수별 임원진 소개와 활동 사진으로 정리한 런타임의 역사">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- 웹폰트 (인터넷이 없으면 시스템 글꼴로 자동 대체됩니다) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="history">
+
+  <!-- 헤더: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- 상단 배너: js/layout.js 가 채워 넣습니다 -->
+    <section id="pageHero"></section>
+
+    <!-- ================= 런타임의 역사 문서 ================= -->
+    <section class="section hdoc-sec">
+      <div class="container hdoc-wrap">
+        <!-- 기수 목록 (누르면 오른쪽 문서가 바뀝니다) -->
+        <aside class="hdoc-side" aria-label="기수 목록">
+          <p class="hdoc-side__title">GENERATIONS<small>기수를 눌러 문서를 열어 보세요</small></p>
+          <ul class="hdoc-gens" id="genTabs" role="tablist"></ul>
+        </aside>
+
+        <!-- 기수 문서 (js/main.js 가 data.js 의 history 로 채웁니다) -->
+        <article class="hdoc" id="hdoc" role="tabpanel" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <!-- 이전/다음 화면 버튼 -->
+    <nav id="pageNav" aria-label="화면 이동"></nav>
+
+    <!-- 사진 크게 보기 -->
+    <div class="lb" id="lightbox" aria-hidden="true">
+      <div class="lb__backdrop" data-close></div>
+      <div class="lb__box" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+        <button type="button" class="lb__close" data-close aria-label="닫기">×</button>
+        <div class="lb__media">
+          <div class="lb__stage" id="lbStage"></div>
+          <button type="button" class="lb__nav lb__nav--prev" id="lbPrev" aria-label="이전 사진">‹</button>
+          <button type="button" class="lb__nav lb__nav--next" id="lbNext" aria-label="다음 사진">›</button>
+          <span class="lb__counter" id="lbCounter"></span>
+        </div>
+        <div class="lb__info">
+          <p class="lb__meta"><span class="lb__cat" id="lbCat"></span><span id="lbDate"></span><span class="arc-sample" id="lbSample">예시</span></p>
+          <h3 class="lb__title" id="lbTitle"></h3>
+          <p class="lb__desc" id="lbDesc"></p>
+          <div class="lb__thumbs" id="lbThumbs"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 푸터: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

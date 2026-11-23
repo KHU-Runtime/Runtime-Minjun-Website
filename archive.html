@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아카이브 | RUNTIME;</title>
+  <meta name="description" content="런타임의 활동 기록과 사진, 런타임의 역사">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- 웹폰트 (인터넷이 없으면 시스템 글꼴로 자동 대체됩니다) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="archive">
+
+  <!-- 헤더: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteHeader"></div>
+
+  <main>
+    <!-- 상단 배너: js/layout.js 가 채워 넣습니다 -->
+    <section id="pageHero"></section>
+
+    <!-- ================= 런타임의 역사로 가기 ================= -->
+    <section class="section history-entry">
+      <div class="container">
+        <a href="history.html" class="history-door reveal">
+          <span class="history-door__body">
+            <em>HISTORY</em>
+            <strong>런타임의 역사</strong>
+            <span>기수별 임원진 소개와 활동 사진을 문서로 정리했어요.</span>
+          </span>
+          <span class="history-door__go">역사 문서 열기 <i aria-hidden="true">→</i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= 활동 기록 (사진) ================= -->
+    <section class="section archive" id="gallery">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="sec-head__en">GALLERY</p>
+          <h2 class="sec-head__ko">활동 기록</h2>
+        </div>
+        <div class="arc-bar reveal">
+          <div class="arc-filter-rows">
+            <div class="arc-filter-row">
+              <span class="arc-filter-label">분류</span>
+              <div class="tabs arc-filters" id="archiveFilters" role="group" aria-label="활동 분류"></div>
+            </div>
+          </div>
+          <p class="arc-total">TOTAL <b id="archiveCount">0</b></p>
+        </div>
+        <ul class="arc-grid" id="archiveGrid"></ul>
+        <p class="arc-help reveal">카드를 누르면 사진과 활동 내용을 크게 볼 수 있어요.</p>
+      </div>
+    </section>
+
+    <!-- 이전/다음 화면 버튼 -->
+    <nav id="pageNav" aria-label="화면 이동"></nav>
+
+    <!-- 사진 크게 보기 -->
+    <div class="lb" id="lightbox" aria-hidden="true">
+      <div class="lb__backdrop" data-close></div>
+      <div class="lb__box" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+        <button type="button" class="lb__close" data-close aria-label="닫기">×</button>
+        <div class="lb__media">
+          <div class="lb__stage" id="lbStage"></div>
+          <button type="button" class="lb__nav lb__nav--prev" id="lbPrev" aria-label="이전 사진">‹</button>
+          <button type="button" class="lb__nav lb__nav--next" id="lbNext" aria-label="다음 사진">›</button>
+          <span class="lb__counter" id="lbCounter"></span>
+        </div>
+        <div class="lb__info">
+          <p class="lb__meta"><span class="lb__cat" id="lbCat"></span><span id="lbDate"></span><span class="arc-sample" id="lbSample">예시</span></p>
+          <h3 class="lb__title" id="lbTitle"></h3>
+          <p class="lb__desc" id="lbDesc"></p>
+          <div class="lb__thumbs" id="lbThumbs"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 푸터: js/layout.js 가 채워 넣습니다 -->
+  <div id="siteFooter"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
